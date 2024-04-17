@@ -30,7 +30,7 @@ export default function ProductCard() {
                 />
                 </div>
                 <div className="card-body">
-                  <h5 className="card-title">{product.title}</h5>
+                  <h5 className="card-title text-danger">{product.title}</h5>
                   <p className="card-text" style={{ marginBottom: "1rem" }}>
                     {product.description}
                   </p>
