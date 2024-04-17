@@ -1,27 +1,13 @@
 import { useContext, lazy } from "react";
 import { ProductContext } from "../context/ProductContext";
 import { Link } from "react-router-dom";
-import { useCart } from "../context/CartContext";
-import { ToastContainer,toast } from "react-toastify";
 const Navbar = lazy(() => import("./Navbar"));
 
 export default function ProductCard() {
   const { products } = useContext(ProductContext);
   const productList = products.products || [];
-  
-  const { addItemToCart, removeItemFromCart, cartItems } = useCart();
 
-  const handleAddToCart = (productId) => {
-    const product = productList.find((product) => product.id === productId);
-    const isInCart = cartItems.some((item) => item.id === productId);
-    if (!isInCart) {
-      addItemToCart(product);
-      toast(" 🛒 Product successfully added to your cart! 🎉");
-    } else {
-      removeItemFromCart(productId);
-      toast("🗑️ Product removed from your cart. 😔");
-    }
-  };
+ 
 
   return (
     <div>
