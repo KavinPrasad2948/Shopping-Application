@@ -31,7 +31,7 @@
 
 .card-img-top {
   height: 300px;
-  margin-top: 3%;
+  margin-top: 3px;
   object-fit:cover;
 }
 
@@ -118,7 +118,6 @@
 }
 .cart-container {
   width: 100vw; 
-  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;

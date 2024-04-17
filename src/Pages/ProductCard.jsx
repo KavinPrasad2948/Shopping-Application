@@ -13,7 +13,7 @@ export default function ProductCard() {
     <div>
       <Navbar />
     <div className="cart-container">
-      <div className="row d-flex justify-content-center container-fluid m-0 ">
+      <div className="row d-flex justify-content-center ">
         {productList.map((product) => (
           <div key={product.id} className="col-md-4 col-md-2 mb-4">
             <Link
