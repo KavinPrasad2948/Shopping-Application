@@ -12,9 +12,10 @@ export default function ProductCard() {
   return (
     <div>
       <Navbar />
+    <div className="cart-container">
       <div className="row d-flex justify-content-center container-fluid m-0 ">
         {productList.map((product) => (
-          <div key={product.id} className="col-md-4 mb-4">
+          <div key={product.id} className="col-md-4 col-md-2 mb-4">
             <Link
               to={`/product/${product.id}`}
               className="text-decoration-none"
@@ -39,6 +40,7 @@ export default function ProductCard() {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 }
