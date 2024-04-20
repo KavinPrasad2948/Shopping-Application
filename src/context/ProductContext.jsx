@@ -1,5 +1,6 @@
 import { createContext, useState } from 'react';
-import productsData from '../assets/Public/Product.json'; // Changed variable name
+import productsData from '../assets/Public/Product.json';
+import PropTypes from 'prop-types'
 
 const ProductContext = createContext();
 
@@ -11,6 +12,10 @@ const ProductProvider = ({ children }) => {
       {children}
     </ProductContext.Provider>
   );
+};
+
+ProductProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export { ProductProvider, ProductContext };
